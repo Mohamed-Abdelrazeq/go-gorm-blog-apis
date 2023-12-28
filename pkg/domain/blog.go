@@ -8,7 +8,7 @@ type Blog struct {
 	Content string
 }
 
-type BlogApplication interface {
+type BlogApp interface {
 	Get(id uint) (Blog, error)
 	List() ([]Blog, error)
 	Create(Blog) (Blog, error)
