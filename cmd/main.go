@@ -40,3 +40,12 @@ func main() {
 	// serve the application on port 3000
 	log.Fatal(router.Run(":3000"))
 }
+
+// notes
+// we split our application into three packages:
+// app: contains the application logic
+// domain: contains the domain models and interfaces
+// db: contains the database logic
+// the app package is the entry point of our application. It contains the main function and the routes. It also depends on the domain package and the db package.
+// the domain package contains the domain models and interfaces. It doesn’t depend on any other package.
+// the db package contains the database logic. It depends on the domain package.
